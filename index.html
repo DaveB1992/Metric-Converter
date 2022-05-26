@@ -1,8 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <script src="../JS/index.js"></script>
+    <link rel="stylesheet" href="index.css">
     <title>Imperial To metric Converter</title>
 </head>
 
@@ -13,20 +12,24 @@
                 <header>
                     <h1>Imperial To Metric Units Converter</h1>
                 </header>
-                <input type="text" id="value" placeholder="Value">
+                <input type="number" placeholder="Value" oninput="renderText()">
                 <div class="conversion">
-                    <h2>Length(Meters/Feet)</h2>
-                    <p id="text">Meters = </p>
-                    <h2>Volume(Litres/Gallons)</h2>
-                    <p id="text">Litres = </p>
-                    <h2>Mass(Kilograms/Pounds)</h2>
-                    <p id="text">Kilograms = </p>
+                    <h2>Length(Feet/Meters)</h2>
+                    <p class="text" id="lengthM"></p>
+                    <p class="text" id="lengthFT"></p>
+                    <h2>Volume(Gallon/Litres)</h2>
+                    <p class="text" id="volumeL"></p>
+                    <p class="text" id="volumeG"></p>
+                    <h2>Mass(Pounds/Kilograms)</h2>
+                    <p class="text" id="weightP"></p>
+                    <p class="text" id="weightKG"></p>
                 </div>
                 <!--conversion closing div-->
             </div>
-            <!--value closing div-->
+            <!--heading closing div-->
     </div>
     <!--container closing div-->
+    <script src="index.js"></script>
     </main>
 </body>
 
