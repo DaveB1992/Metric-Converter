@@ -1,26 +1,32 @@
+const input = document.querySelector(`input`);
+const lengthM = document.querySelector(`#lengthM`);
+const lengthFt = document.querySelector(`#lengthFT`); 
+const volumeL = document.querySelector(`#volumeL`);
+const volumeG = document.querySelector(`#volumeG`);
+const weightP = document.querySelector(`#weightP`);
+const weightKg = document.querySelector(`#weightP`);
+const length = 3.281; 
+const volume = 4.546;
+const mass = 2.205;
+
+
+
 function aRound(n) {
     return Math.round((n + Number.EPSILON) * 100)
     /100;
 };
 
 function renderText(){
+    const value = input.value;
+    
+    lengthFt.textContent = `Feet(Ft) to Meters(M):${aRound(value / length)}`;
+    lengthM.textContent = `Meters(M) to Feet(Ft):${aRound(value * length)}`;
 
-    const value = document.querySelector(`#value`).value
+    volumeL.textContent = `Litres(L) to Gallons(G):${aRound(value / volume)}`;
+    volumeG.textContent = `Gallons(G) to Litres(L):${aRound(value * volume)}`;
 
-    document.querySelector(`#lengthM`).textContent = "Feet(FT) to Meters(M): " + 
-    aRound(value/3.281);
-    document.querySelector(`#lengthFT`).textContent = "Meters(M) to Feet(FT): " + 
-    aRound(value*3.281);
-
-    document.querySelector(`#volumeL`).textContent = "Litres(L) to Gallons(G): " +
-    aRound(value / 4.546);
-    document.querySelector(`#volumeG`).textContent = "Gallons(G) to Litres(L): " +
-    aRound(value * 4.546);
-
-    document.querySelector(`#weightP`).textContent = "Pounds(lbs) to Kilograms(Kgs): " +
-    aRound(value / 2.205);
-    document.querySelector(`#weightkg`).textContent = "Kilograms(Kgs) to Pounds(Lbs): " +
-    aRound(value * 2.205);
+    weightP.textContent = `Pounds(Lbs) to Kilograms(Kgs):${aRound(value / mass)}`;
+    weightKg.textContent = `Kilograms(Kg) to Pounds(Lbs):${aRound(value * mass)}`;
 
 };
 
