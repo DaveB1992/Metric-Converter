@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
 
-
 html, body {
     margin: 0;
     padding: 0;
@@ -23,6 +22,17 @@ p{
     font-size: 70px;
 }
 
+input{
+    width: 100%;
+    border: none;
+    display: block;
+    margin: auto;
+    padding: auto;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    background: transparent;
+}
 
 input:focus{ 
       outline: none !important;
@@ -52,16 +62,6 @@ input:focus::placeholder{
 );
 }
 
-#value{
-    display: block;
-    margin: auto;
-    padding: auto;
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    background: transparent;
-}
-
 .conversion{
     text-align: center;
     padding: 10px;
@@ -69,6 +69,6 @@ input:focus::placeholder{
     background-color: #1F2937;
 }
 
-#text{
+.text{
     font-size: 25px;
 }
